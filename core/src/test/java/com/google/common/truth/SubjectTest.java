@@ -136,6 +136,8 @@ public class SubjectTest extends BaseSubjectTestCase {
           npTester.testAllPublicInstanceMethods(subject);
         }
 
+        assertThat(subject.toString()).contains("com.google.common.truth.");
+
         subject.isNotEqualTo(new Object());
         subject.isEqualTo(null);
         try {
